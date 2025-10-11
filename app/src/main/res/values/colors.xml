@@ -2,4 +2,30 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cores principais -->
+    <color name="colorPrimary">#4E342E</color> <!-- Marrom escuro (confiança e solidez) -->
+    <color name="colorPrimaryDark">#3E2723</color> <!-- Marrom ainda mais profundo -->
+    <color name="colorAccent">#388E3C</color> <!-- Verde médio vibrante (destaques e botões) -->
+    <color name="primaryGrey">#2c4053</color> <!-- Verde médio vibrante (destaques e botões) -->
+
+    <!-- Variações -->
+    <color name="colorPrimaryLight">#795548</color> <!-- Marrom mais claro -->
+    <color name="colorAccentLight">#66BB6A</color> <!-- Verde mais suave -->
+    <color name="colorAccentDark">#2E7D32</color> <!-- Verde escuro para foco e contraste -->
+
+    <!-- Fundo e superfície -->
+    <color name="backgroundLight">#FAF8F6</color> <!-- Fundo geral do app -->
+    <color name="surfaceLight">#FFFFFF</color> <!-- Cartões, painéis -->
+    <color name="dividerColor">#D7CCC8</color> <!-- Linhas sutis de separação -->
+
+    <!-- Texto -->
+    <color name="textPrimary">#212121</color> <!-- Texto principal -->
+    <color name="textSecondary">#5D4037</color> <!-- Texto secundário, marrom acinzentado -->
+    <color name="textOnPrimary">#FFFFFF</color> <!-- Texto sobre botões primários -->
+
+    <!-- Sucesso, alerta, erro -->
+    <color name="colorSuccess">#4CAF50</color> <!-- Verde sucesso -->
+    <color name="colorWarning">#FFA000</color> <!-- Amarelo alerta -->
+    <color name="colorError">#D32F2F</color> <!-- Vermelho erro -->
 </resources>

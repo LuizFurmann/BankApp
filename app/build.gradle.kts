@@ -49,4 +49,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Navigation Components
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+// Material Design Components
+    implementation(libs.androidx.material)
+// System UI Controller for managing system bars
+    implementation(libs.accompanist.systemuicontroller)
 }
