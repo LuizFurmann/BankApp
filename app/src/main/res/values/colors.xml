@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#B9B9B9</color>
 
     <!-- Cores principais -->
     <color name="colorPrimary">#4E342E</color> <!-- Marrom escuro (confiança e solidez) -->
