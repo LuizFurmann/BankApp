@@ -76,7 +76,7 @@ class HomeFragment : Fragment() {
                 binding.btnVisibility.setBackgroundResource(R.drawable.ic_visibility_on)
                 hideAmount = true
 
-                binding.tvBalanceAmount.text = "R$ ***,**"
+                binding.tvBalanceAmount.text = "R$ *****"
             }
         }
     }

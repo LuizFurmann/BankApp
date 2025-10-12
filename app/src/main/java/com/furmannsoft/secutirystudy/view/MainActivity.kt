@@ -53,12 +53,12 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.settingsId -> {
-                    openFragment(TransferFragment())
+                    openFragment(SettingsFragment())
                     setTitle("Settings")
                     true
                 }
                 R.id.profileId -> {
-                    openFragment(TransferFragment())
+                    openFragment(ProfileFragment())
                     setTitle("Profile")
                     true
                 }
