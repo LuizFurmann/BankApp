@@ -189,12 +189,28 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
+                        android:id="@+id/imgCompany"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_restaurant"/>
 
                 </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant Coffee"
+                    app:layout_constraintStart_toEndOf="@+id/cardImageCompany"
+                    app:layout_constraintTop_toTopOf="@+id/cardImageCompany"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant Coffee"
+                    app:layout_constraintStart_toEndOf="@+id/cardImageCompany"
+                    app:layout_constraintTop_toTopOf="@+id/cardImageCompany"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
