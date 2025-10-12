@@ -17,6 +17,8 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     val cardAdapter = CardAdapter()
 
+    var hideAmount = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,13 +33,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupRecyclerView()
+        showHideAmount()
     }
 
     fun setupRecyclerView() {
 
         val cardList = arrayListOf(
-            Card(1, "Visa", "Crédito", "1234567890123456"),
-            Card(2, "Mastercard", "Débito", "64378264864784")
+            Card(1, "Nubank", "MasterCard", "Crédito", "123123123"),
+            Card(2, "Caixa", "Visa", "Débito", "123123123")
         )
 
         binding.rvCards.adapter = cardAdapter
@@ -58,6 +61,23 @@ class HomeFragment : Fragment() {
         } else {
 
             cardAdapter.updateList(productList)
+        }
+    }
+
+    fun showHideAmount() {
+        binding.btnVisibility.setBackgroundResource(R.drawable.ic_visibility_off)
+        binding.btnVisibility.setOnClickListener {
+
+            if(hideAmount){
+                binding.btnVisibility.setBackgroundResource(R.drawable.ic_visibility_off)
+                hideAmount = false
+                binding.tvBalanceAmount.text = "R$ 131.670,30"
+            } else {
+                binding.btnVisibility.setBackgroundResource(R.drawable.ic_visibility_on)
+                hideAmount = true
+
+                binding.tvBalanceAmount.text = "R$ ***,**"
+            }
         }
     }
 }

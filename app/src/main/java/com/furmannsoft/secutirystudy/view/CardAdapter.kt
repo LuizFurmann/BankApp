@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -45,13 +46,23 @@ class CardAdapter : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
     class ViewHolder(binding: CardLayoutBinding) : RecyclerView.ViewHolder(binding.getRoot()) {
         val cardNumber: TextView = binding.tvCardNumber
         val cardType: TextView = binding.tvCardType
+        var cardFlag : ImageView = binding.imgCardFlag
+        val cardBank : ConstraintLayout = binding.cardBank
 
         fun bindData(item: Card){
             cardNumber.setText(item.cardNumber)
-            cardType.setText(item.cardNumber)
+            cardType.setText(item.cardType)
+
+            if(item.cardBank == "Nubank"){
+                cardBank.setBackgroundResource(R.drawable.bg_nubank)
+            } else if(item.cardBank == "Caixa") {
+                cardBank.setBackgroundResource(R.drawable.bg_caixa)
+            }
 
             if(item.cardFlag == "MasterCard"){
-
+                cardFlag.setBackgroundResource(R.drawable.ic_mastercard_logo)
+            } else if(item.cardFlag == "Visa") {
+                cardFlag.setBackgroundResource(R.drawable.ic_visa)
             }
         }
     }
