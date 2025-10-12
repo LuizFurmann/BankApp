@@ -8,16 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import com.furmannsoft.secutirystudy.R
 import com.furmannsoft.secutirystudy.databinding.FragmentHomeBinding
+import com.furmannsoft.secutirystudy.databinding.FragmentTransferBinding
 
 class TransferFragment : Fragment() {
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentTransferBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentTransferBinding.inflate(inflater, container, false)
 
         setHasOptionsMenu(true);
         return binding.root
