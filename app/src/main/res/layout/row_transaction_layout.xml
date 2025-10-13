@@ -43,7 +43,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tv"
+            android:id="@+id/tvTransactionPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -54,6 +54,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/tvTransactionAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
