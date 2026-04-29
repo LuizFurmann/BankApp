@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".view.MainActivity">
 
     <FrameLayout
@@ -21,7 +22,7 @@
         style="@style/CustomBottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:fitsSystemWindows="false"
         android:background="@drawable/bg_rounded"
         app:labelVisibilityMode="labeled"

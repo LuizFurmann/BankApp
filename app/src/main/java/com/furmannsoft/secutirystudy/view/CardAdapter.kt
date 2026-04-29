@@ -54,9 +54,9 @@ class CardAdapter : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
             cardType.setText(item.cardType)
 
             if(item.cardBank == "Nubank"){
-                cardBank.setBackgroundResource(R.drawable.bg_nubank)
+                cardBank.setBackgroundResource(R.color.greyDark)
             } else if(item.cardBank == "Caixa") {
-                cardBank.setBackgroundResource(R.drawable.bg_caixa)
+                cardBank.setBackgroundResource(R.color.colorWarning)
             }
 
             if(item.cardFlag == "MasterCard"){

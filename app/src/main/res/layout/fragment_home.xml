@@ -5,226 +5,288 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/background"
     tools:context=".view.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="110dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/backgroundLight">
+        android:layout_height="wrap_content"
+        android:paddingBottom="120dp">
+
+        <!-- HEADER -->
 
         <TextView
             android:id="@+id/tvHello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Good morning, Luiz"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Good morning,"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luiz 👋"
+            android:textColor="#111827"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tvHello"
+            app:layout_constraintTop_toBottomOf="@id/tvHello" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardNotification"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:elevation="2dp"
-            app:cardCornerRadius="10dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_notification" />
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_notification"
+                app:tint="#0A2540" />
 
         </androidx.cardview.widget.CardView>
 
+        <!-- BALANCE CARD -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardBalanceUser"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
-            app:cardCornerRadius="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="#0A2540"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvHello">
+            app:layout_constraintTop_toBottomOf="@id/tvName">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="10dp">
+                android:layout_height="wrap_content"
+                android:padding="24dp">
 
                 <TextView
                     android:id="@+id/tvTitleBalance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:text="Your balance"
-                    android:textColor="@color/grey"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
+                    android:text="Total Balance"
+                    android:textColor="#B6C2CF"
+                    android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btnVisibility"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    app:tint="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTitleBalance"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTitleBalance" />
 
                 <TextView
                     android:id="@+id/tvBalanceAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="14dp"
                     android:text="R$ 131.670,30"
-                    android:textSize="40sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvTitleBalance" />
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleBalance" />
 
-                <ImageView
-                    android:id="@+id/btnVisibility"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginEnd="15dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvBalanceAmount"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tvBalanceAmount" />
-
-                <Button
-                    android:id="@+id/btnAddMoney"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tvIncome"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="18dp"
+                    android:text="↑ Income  +12.4%"
+                    android:textColor="#00C896"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBalanceAmount" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddMoney"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="22dp"
                     android:text="Add Money"
+                    android:textAllCaps="false"
+                    android:textColor="#0A2540"
+                    app:backgroundTint="#FFFFFF"
+                    app:cornerRadius="18dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvBalanceAmount" />
+                    app:layout_constraintTop_toBottomOf="@id/tvIncome" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
+        <!-- ACTIONS -->
+
+        <LinearLayout
+            android:id="@+id/layoutActions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardBalanceUser">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Send"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:backgroundTint="#EAF1FF"
+                android:textColor="#0A2540"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Pay"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:backgroundTint="#0A2540"
+                android:textColor="#EAF1FF"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Top Up"
+                android:textAllCaps="false"
+                app:cornerRadius="16dp"
+                app:backgroundTint="#EAF1FF"
+                android:textColor="#0A2540"/>
+
+        </LinearLayout>
+
+        <!-- CARDS -->
+
         <TextView
-            android:id="@+id/tvYourBalanceTitle"
+            android:id="@+id/tvCards"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:text="Your cards"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="26dp"
+            android:text="Your Cards"
+            android:textColor="#111827"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardBalanceUser" />
+            app:layout_constraintTop_toBottomOf="@id/layoutActions" />
 
         <TextView
-            android:id="@+id/tvAddCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="20dp"
-            android:text="+ New card"
-            android:textSize="18sp"
+            android:layout_marginEnd="24dp"
+            android:text="+ New"
+            android:textColor="#1E90FF"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvCards"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardBalanceUser" />
+            app:layout_constraintTop_toTopOf="@id/tvCards" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvYourBalanceTitle"
+            android:layout_marginTop="16dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCards"
             tools:itemCount="2"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/card_layout"
             tools:orientation="horizontal" />
 
+        <!-- TRANSACTIONS -->
+
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:elevation="2dp"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/rvCards">
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvCards">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
 
                 <TextView
-                    android:id="@+id/tvTransactionTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="Transactions"
+                    android:text="Recent Transactions"
+                    android:textColor="#111827"
                     android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:text="See all"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_marginTop="18dp"
+                    android:text="☕ Coffee Shop        - R$ 18,90"
+                    android:textColor="#374151"
+                    android:textSize="15sp" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_margin="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvTransactionTitle">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="🛒 Market            - R$ 154,20"
+                    android:textColor="#374151"
+                    android:textSize="15sp" />
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cardImageCompany"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
-                        app:cardCornerRadius="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="🎬 Streaming         - R$ 29,90"
+                    android:textColor="#374151"
+                    android:textSize="15sp" />
 
-                        <ImageView
-                            android:id="@+id/imgCompany"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_restaurant" />
+            </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:id="@+id/tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Restaurant Coffee"
-                        app:layout_constraintStart_toEndOf="@+id/cardImageCompany"
-                        app:layout_constraintTop_toTopOf="@+id/cardImageCompany" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Restaurant Coffee"
-                        app:layout_constraintStart_toEndOf="@+id/cardImageCompany"
-                        app:layout_constraintTop_toTopOf="@+id/cardImageCompany" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
