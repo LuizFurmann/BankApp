@@ -38,12 +38,12 @@ class TransferFragment : Fragment() {
     fun setupRecyclerView() {
 
         val transactionList = arrayListOf(
-            Transaction(1, "Cafe da esquina", "Débito", "50,00", "10/10/2025"),
-            Transaction(2, "Restaurante da avenida", "Crédito", "130,00","10/10/2025"),
-            Transaction(3, "Loja de roupa", "Crédito", "230,00","10/10/2025"),
-            Transaction(4, "Posto de combustível", "Débito", "100,00","09/10/2025"),
-            Transaction(5, "Padaria", "Débito", "50,00","09/10/2025"),
-            Transaction(6, "Restaurante", "Crédito", "70,00","08/10/2025"),
+            Transaction(1, "Coffe shop", "Debit", "50,00", "10/10/2025"),
+            Transaction(2, "Restaurant", "Credit", "130,00","10/10/2025"),
+            Transaction(3, "Gas station", "Credit", "230,00","10/10/2025"),
+            Transaction(4, "Restaurant", "Debit", "100,00","09/10/2025"),
+            Transaction(5, "Coffe shop", "Debit", "50,00","09/10/2025"),
+            Transaction(6, "Restaurante", "Credit", "70,00","08/10/2025"),
         )
 
         binding.rvTransactions.adapter = transactionAdapter
