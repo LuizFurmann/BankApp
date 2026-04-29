@@ -39,8 +39,8 @@ class HomeFragment : Fragment() {
     fun setupRecyclerView() {
 
         val cardList = arrayListOf(
-            Card(1, "Nubank", "MasterCard", "Crédito", "123123123"),
-            Card(2, "Caixa", "Visa", "Débito", "123123123")
+            Card(1, "Nubank", "MasterCard", "Credit", "123123123"),
+            Card(2, "Caixa", "Visa", "Debit", "123123123")
         )
 
         binding.rvCards.adapter = cardAdapter
